@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    border: 1px solid black;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+    background-color: rgba(100, 99, 99, 0.9);
+}
+
+.container > div {
+    text-align: center;
+    padding: 2vw;
+    background-color: rgba(100, 99, 99, 0.9);
+    font-size: 2rem;
+}
