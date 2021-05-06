@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+    margin: 10rem auto;
     display: inline-grid;
     border: 1px solid #fff;
     grid-gap: 5px;
@@ -17,4 +18,12 @@ body {
     padding: 2vw;
     background-color: rgba(100, 99, 99, 0.9);
     font-size: 2rem;
+}
+
+.container > div::before {
+
+}
+
+.container > div::after {
+    
 }
