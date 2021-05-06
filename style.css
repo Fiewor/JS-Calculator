@@ -1,7 +1,13 @@
-.container {
+body {
     display: grid;
-    border: 1px solid black;
-    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: inline-grid;
+    border: 1px solid #fff;
+    grid-gap: 5px;
     grid-template-columns: auto auto auto;
     background-color: rgba(100, 99, 99, 0.9);
 }
