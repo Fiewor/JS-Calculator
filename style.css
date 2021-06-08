@@ -4,26 +4,46 @@ body {
     align-content: center;
 }
 
+.top {
+    grid-area: top;
+    cursor: text;
+}
+
 .container {
-    margin: 10rem auto;
+    margin: 3rem auto;
     display: inline-grid;
     border: 1px solid #fff;
     grid-gap: 5px;
-    grid-template-columns: auto auto auto;
-    background-color: rgba(100, 99, 99, 0.9);
+    grid-template-areas:'top top top top'
+                        'btn btn btn btn'
+                        'btn btn btn btn'
+                        'btn btn btn btn';
+    background-color: rgba(100, 99, 99, 0.6);
+    color: #fff;
+    box-shadow: 0 1px 2px 3px #2d2f33;
+    -moz-box-shadow: 0 1px 0 0 #2d2f33;
 }
 
 .container > div {
     text-align: center;
     padding: 2vw;
-    background-color: rgba(100, 99, 99, 0.9);
-    font-size: 2rem;
+    background-color: rgba(128, 126, 126, 0.2);
+    font-size: 3rem;
+    cursor: pointer;
 }
 
-.container > div::before {
+.btn:active {
+    background-color: rgba(128, 126, 126, 0.7);
+}
+
+.sign {
+    color: rgb(94, 94, 236);
+}
+
+/* .container > div::before {
 
 }
 
 .container > div::after {
     
-}
+} */
