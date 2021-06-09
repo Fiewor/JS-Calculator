@@ -1,11 +1,27 @@
+let arr = [];
+// for each button with the .btn class, listen for a click event
 for(let butt of document.querySelectorAll(".btn")) {
-    butt.addEventListener("click", () => console.log(this.innerHTML));
+    butt.addEventListener("click", function() {
+        // when clicked, store the value of the clicked button in the value variable
+        let value = document.getElementById("textarea").value = this.innerHTML;
+        // multiple values should be pushed into the arr
+        arr.push(value);
+        // attempting to use the arr as a parameter for the calc function
+        calc(arr);
+    });
 }
+// when a button is pressed, push the pressed key into the arr
+document.addEventListener("keypress", function(event) {
+    arr.push(event.key);
+    // again trying to use the arr as a parameter for the calc function
+    calc(arr);
+})
 
-// calc = (num1, num2, operator) => {return operator(num1, num2)};
-// add = (num1, num2) => {return num1 + num2};
+calc = (arr, operator) => {return add(arr)};
+add = (arr) => {
+    arr.reduce((a, b) => a + b);
+};
 
-// constructor
-// function new Operator = {
-//     this.name = name;
-// }
+subtract = (arr) => {
+    arr.reduce((a, b) => a - b);
+};

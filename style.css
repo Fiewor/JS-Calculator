@@ -4,9 +4,11 @@ body {
     align-content: center;
 }
 
-.top {
+#textarea {
     grid-area: top;
     cursor: text;
+    margin: 0;
+    padding: 4vw 0;
 }
 
 .container {
