@@ -5,28 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculatortinator</title>
+    <script src="index.js" defer></script>
+    <title>Javascript Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <textarea name="" id="textarea" rows="1"></textarea>
-        <div class="btn">1</div>
-        <div class="btn">2</div>
-        <div class="btn">3</div>
-        <div class="btn sign">&divide;</div>
-        <div class="btn">4</div>
-        <div class="btn">5</div>
-        <div class="btn">6</div>
-        <div class="btn sign">&times;</div>
-        <div class="btn">7</div>
-        <div class="btn">8</div>
-        <div class="btn">9</div>
-        <div class="btn sign">-</div>
-        <div class="btn">*</div>
-        <div class="btn">0</div>
-        <div class="btn">#</div>
-        <div class="btn sign">+</div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <!-- using data attributes instead of classes because it's easier that way to see which part of the HTML are being used by JS and which part are used by CSS -->
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>&div;</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
     </div>
-<script src="index.js"></script>
 </body>
 </html>
